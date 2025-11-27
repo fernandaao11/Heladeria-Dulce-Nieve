@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Heladería Dulce Nieve</title>
+
+    <!-- Tipografía -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-image: url("https://www.fuertesconleche.com/wp-content/uploads/2022/08/heladeria-artesanal-1024x723.jpg");
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        .menu {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(5px);
+            display: flex;
+            justify-content: center;
+            padding: 12px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            z-index: 10;
+        }
+
+        .menu a {
+            margin: 0 20px;
+            text-decoration: none;
+            font-size: 18px;
+            color: #c0392b;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .menu a:hover {
+            color: #e74c3c;
+        }
+
+        .header {
+            margin-top: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 25px;
+            background-color: rgba(255, 255, 255, 0.85);
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+        }
+
+        .header img {
+            width: 100px;
+            margin-right: 20px;
+        }
+
+        .pantalla {
+            display: none;
+            width: 80%;
+            margin: 30px auto;
+            padding: 30px;
+            background-color: rgba(255, 255, 255, 0.85);
+            border-radius: 15px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+            animation: aparecer 0.4s ease;
+        }
+
+        @keyframes aparecer {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .activa {
+            display: block;
+        }
+
+        h1, h2, h3 {
+            color: #a83232;
+        }
+
+        ul {
+            line-height: 1.8;
+            font-size: 16px;
+        }
+    </style>
+
+    <script>
+        function mostrarPantalla(id) {
+            var pantallas = document.getElementsByClassName("pantalla");
+            for (var i = 0; i < pantallas.length; i++) {
+                pantallas[i].style.display = "none";
+            }
+            document.getElementById(id).style.display = "block";
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <!-- MENÚ -->
+    <div class="menu">
+        <a onclick="mostrarPantalla('inicio')">Inicio</a>
+        <a onclick="mostrarPantalla('somos')">¿Quiénes somos?</a>
+        <a onclick="mostrarPantalla('hacemos')">¿Qué hacemos?</a>
+        <a onclick="mostrarPantalla('productos')">Productos</a>
+        <a onclick="mostrarPantalla('contacto')">Contacto</a>
+    </div>
+
+    <div class="header">
+        <img src="https://tse2.mm.bing.net/th/id/OIP.wRWJaGaX7e1l8MHZKIQdTwHaHa?rs=1&pid=ImgDetMain&o=7&rm=3">
+        <h1>Heladería Dulce Nieve</h1>
+    </div>
+
+    
+    <div id="inicio" class="pantalla activa">
+        <h2>Bienvenidos</h2>
+        <p>Estamos felices de recibirte en este espacio creado para los amantes de los sabores auténticos y los momentos dulces. Aquí encontrarás paletas artesanales, helados cremosos y antojos refrescantes hechos con ingredientes frescos, de calidad y con mucho cariño.
+
+        <br><br>Explora nuestras secciones, descubre tus sabores favoritos y déjate sorprender por nuestras creaciones.
+        Siéntete como en casa… y date un gustito. 🍦✨.</p>
+    </div>
+
+    
+    <div id="somos" class="pantalla">
+        <h2>¿Quiénes somos?</h2>
+        <p>Somos una heladería artesanal enfocada en ofrecer productos frescos, deliciosos y preparados con pasión.
+           Nuestro compromiso es brindar calidad, sabor y una experiencia única a cada cliente. <br><br>
+           Creemos en la calidad, en el buen servicio y en crear pequeños momentos felices a través de cada paleta,
+           helado o bebida que preparamos. Cada uno de nuestros productos está elaborado con ingredientes seleccionados
+           y con el cariño de un negocio local que disfruta endulzar el día de quienes nos visitan.</p>
+
+        <h3>Misión</h3>
+        <p>Ofrecer helados y postres artesanales elaborados con ingredientes frescos, brindando un servicio cálido
+           que genere experiencias agradables para cada cliente, promoviendo la tradición y el sabor local.</p>
+
+        <h3>Visión</h3>
+        <p>Ser la heladería preferida de Toluca de Lerdo, reconocida por su calidad, innovación y excelente atención,
+           expandiendo nuestra línea de productos y consolidándonos como un referente de postres artesanales en la región.</p>
+    </div>
+
+    
+    <div id="hacemos" class="pantalla">
+        <h2>¿Qué hacemos?</h2>
+        <p>En nuestra paletería nos especializamos en crear experiencias llenas de sabor, frescura y auténtica calidad. Cada uno de nuestros productos nace de un proceso cuidadoso en el que combinamos ingredientes seleccionados, recetas tradicionales y un toque creativo que nos distingue. Nos apasiona trabajar con frutas naturales, bases cremosas y técnicas artesanales que garantizan un sabor inigualable en cada bocado.
+
+Elaboramos paletas de agua, leche y especiales, helados cremosos, malteadas, frappés y antojos fríos pensados para todos los gustos. Innovamos constantemente para ofrecer nuevas combinaciones, sabores de temporada y opciones pensadas para quienes buscan algo diferente, ya sea algo dulce, algo ligero o algo atrevido.
+
+Más que una paletería, somos un espacio donde queremos que cada persona encuentre algo que le haga sonreír. Cuidamos cada detalle: desde la frescura de los ingredientes, la higiene en nuestros procesos, la presentación de cada producto y, por supuesto, la atención cercana y amable que nos caracteriza.
+
+Lo que hacemos es simple: crear momentos dulces, refrescantes y memorables… uno a la vez. 🍦✨</p>
+    </div>
+
+    
+    <div id="productos" class="pantalla">
+        <h2>Productos</h2>
+
+        <h3>Helados artesanales</h3>
+        <ul>
+            <li>Chocolate — $25</li>
+            <li>Vainilla — $25</li>
+            <li>Fresa — $25</li>
+            <li>Mango — $30</li>
+        </ul>
+        <img src="https://th.bing.com/th/id/R.7695821a1d047318c7c15ac6d605e16d?rik=nvD6e8Tq3qyGKQ&pid=ImgRaw&r=0" width="400">
+
+        <h3>Paletas</h3>
+        <ul>
+            <li>Limón — $20</li>
+            <li>Tamarindo — $22</li>
+            <li>Mango — $22</li>
+        </ul>
+        <img src="https://tse4.mm.bing.net/th/id/OIP.z-AHtXh3Ms31YLyiPClS7gHaEK?rs=1&pid=ImgDetMain&o=7&rm=3">
+
+        <h3>Malteadas</h3>
+        <ul>
+            <li>Chocolate — $35</li>
+            <li>Fresa — $35</li>
+            <li>Vainilla — $35</li>
+        </ul>
+        <img src="https://tse1.mm.bing.net/th/id/OIP.pPGFIx31x9AebhwsEud7rAHaEK?w=750&h=422&rs=1&pid=ImgDetMain&o=7&rm=3" width="400">
+    </div>
+
+   
+    <div id="contacto" class="pantalla">
+        <h2>Contacto</h2>
+        <p>Si deseas comunicarte con nosotros para pedidos, información o sugerencias, aquí te dejamos nuestros datos:</p>
+
+        <h3>📱 WhatsApp</h3>
+        <p>
+            <a href="https://wa.me/527292401836" target="_blank" style="color:#c0392b; font-weight:600;">
+                729 240 1836 — Enviar mensaje por WhatsApp
+            </a>
+        </p>
+
+        <h3>📧 Correo electrónico</h3>
+        <p>
+            <a href="mailto:fernandaortega26896@gmail.com" style="color:#c0392b; font-weight:600;">
+                fernandaortega26896@gmail.com
+            </a>
+        </p>
+
+        <p>¡Será un gusto atenderte! 🍨✨</p>
+    </div>
+
+</body>
+</html>
